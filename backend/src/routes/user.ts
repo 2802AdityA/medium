@@ -67,7 +67,7 @@ userRouter.post("/signin", async (c) => {
 			return c.json({ message: "wrong credentials" });
 		}
 		const token = await sign({ id: user.id }, c.env.JWT_SECRET);
-		return c.json({ message: token });
+		return c.json({ token: token });
 	} catch (e) {
 		return c.json({ message: e });
 	}
