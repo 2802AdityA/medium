@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { Avatar } from "../Blog/"
 
 export const AppBar = () => {
@@ -8,6 +9,9 @@ export const AppBar = () => {
                 Medium
             </div>
             <div>
+                <Link to={"/create"}>
+                    <button className="bg-green-600 p-2 mr-4 font-bold text-white rounded-full">Create</button>
+                </Link>
                 <Avatar name="Aditya Singla" />
             </div>
         </div>
