@@ -24,7 +24,7 @@ export const AuthForm = ({ buttonText, inputs, type, setInputs }: AuthProps) => 
             const jwt: string = response.data.token;
 
             localStorage.setItem("token", jwt);
-            navigate("/blog")
+            navigate("/blogs")
         } catch (e) {
             console.log(`Error: ${e}`);
         }
