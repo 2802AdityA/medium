@@ -1,9 +1,10 @@
 import axios from 'axios';
 import { AppBar } from '../components/AppBar/AppBar';
-import { BACKEND_URL } from '../config';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { TextEditor } from '../components';
+
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
 export const Create = () => {
     const [title, setTitle] = useState("");
